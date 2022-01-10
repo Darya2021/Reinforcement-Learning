@@ -16,7 +16,9 @@ def epsilon_greedy(state, epsilon):
         return env.action_space.sample()
     else:
         return max(list(range(env.action_space.n)), key = lambda x: Q[(state, x)])
-
+        # or action = np.argmax(Q[state, :])
+        # return action
+    
     
 alpha = 0.85
 gamma = 0.90
